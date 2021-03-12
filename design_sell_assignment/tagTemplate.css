@@ -1,0 +1,30 @@
+.h1TagTemplate {
+    font-family: courier;
+    color: orangered;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+.pTagTemplate {
+    font-family: 'Ultra', sans-serif;
+    color: midnightblue;
+    font-size: 100px;
+    text-shadow: 0px 2px 3px #555;
+}
+
+.divTagTemplate {
+    font-family: 'Old English Text MT';
+    color: black;
+    animation: fadeOut 2s infinite;
+    font-size: 100px;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
