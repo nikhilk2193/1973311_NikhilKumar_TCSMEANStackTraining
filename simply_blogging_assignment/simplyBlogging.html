@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Simply Blogging</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center"><u>Simply Blogging</u></h1>
+        </div>
+        <div class="row">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Add Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contacts</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Title:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="title" placeholder="Enter title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Articles:</label>
+                    <div class="col-sm-4">
+                        <textarea class="form-control" id="articles" placeholder="Enter Articles" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Add Image:</label>
+                    <div class="col-sm-4">
+                        <input type="file" class="form-control-file" id="addImage" placeholder="Enter local directory file name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default" onclick="addFormData()">Add Blog</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <br>
+            <div class="row" id="contentPanel">
+            </div>
+        </div>
+    </div>
+    <script src="blogging.js"></script>
+    <script>
+        document.querySelector("#addImage").addEventListener("change", function () {
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                sessionStorage.setItem("recent-image", reader.result);
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+    </script>
+</body>
+</html>
