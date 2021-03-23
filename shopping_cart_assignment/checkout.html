@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center" style="color:blue"><u>Shopping Cart Checkout</u></h1>
+        </div>
+        <form>
+            <table class="table table-bordered" id="cartList" style="border-collapse:separate; width:400px; border-spacing:10px;">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </form>
+        <br />
+        <label style="color:blue">Total Price : </label><span style="color:blue" id="totalPrice"></span><br />
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>
