@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="text-center">My Portfolio</h1>
+  <p class="control-label col-sm-2">Welcome : {{userName}}</p>
+  <form #contactDetail="ngForm" (ngSubmit)="onClickSubmit(contactDetail.value)">
+    <label class="control-label col-sm-2">Contact Name : </label>
+    <input class="col-sm-4" type="text" name="contactName" [(ngModel)]="contactName">
+    <br />
+    <label class="control-label col-sm-2">Phone No. : </label>
+    <input class="col-sm-4" type="number" name="phoneNumber" [(ngModel)]="phoneNumber">
+    <br />
+    <label class="control-label col-sm-2"></label>
+    <input class="col-sm-4" type="submit" value="Save">
+  </form>
+  <br />
+  <h3>Contact Details</h3>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Phone No.</th>
+    </tr>
+    <tr *ngFor="let item of contactList">
+      <td>
+        {{item.contactName}}
+      </td>
+      <td>
+        {{item.phoneNumber}}
+      </td>
+    </tr>
+  </table>
+</div>

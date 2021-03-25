@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-center">Registeration Form</h1>
+  <form #registeration="ngForm" (ngSubmit)="onClickSubmit(registeration.value)">
+    <label class="control-label col-sm-2">First name : </label>
+    <input class="col-sm-4" type="text" name="fName" [(ngModel)]="fName">
+    <br />
+    <label class="control-label col-sm-2">Last name : </label>
+    <input class="col-sm-4" type="text" name="lName" [(ngModel)]="lName">
+    <br />
+    <label class="control-label col-sm-2">Username : </label>
+    <input class="col-sm-4" type="text" name="userName" [(ngModel)]="userName">
+    <br />
+    <label class="control-label col-sm-2">Password : </label>
+    <input class="col-sm-4" type="password" name="password" [(ngModel)]="password">
+    <br />
+    <label class="control-label col-sm-2"></label>
+    <input class="col-sm-2" type="submit" value="Register">
+    <input class="col-sm-2" type="reset" value="Reset">
+  </form>
+  <label class="control-label col-sm-2"></label>
+  <a class="text-center" routerLink="../login">Login</a>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="text-center">Login Form</h1>
+  <form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+    <label class="control-label col-sm-2">Username : </label>
+    <input class="col-sm-4" type="text" name="userName" ngModel [(ngModel)]="username">
+    <br />
+    <label class="control-label col-sm-2">Password : </label>
+    <input class="col-sm-4" type="password" name="password" value="password" [(ngModel)]="password">
+    <br />
+    <label class="control-label col-sm-2"></label>
+    <input class="col-sm-4" type="submit" value="Login">
+  </form>
+  <label class="control-label col-sm-2"></label>
+  <a class="text-center" routerLink="../signUp">Sign Up</a>
+</div>
